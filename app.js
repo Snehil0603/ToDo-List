@@ -84,22 +84,22 @@ app.post("/delete",function(req,res){
         })
 })
 
-app.get("/work",function(req,res){
-    res.render("list",{
-        listTitle:"Work list",
-        Item:workItem,
-    });
-})
+// app.get("/work",function(req,res){
+//     res.render("list",{
+//         listTitle:"Work list",
+//         Item:workItem,
+//     });
+// })
 
-app.post("/work",function(req,res){
-    var addItem = req.body.newItem;
-    workItem.push(addItem);
-    res.redirect("/work");
-})
+// app.post("/work",function(req,res){
+//     var addItem = req.body.newItem;
+//     workItem.push(addItem);
+//     res.redirect("/work");
+// })
 
-app.get("/about",function(req,res){
-res.render("about");
-})
+// app.get("/about",function(req,res){
+// res.render("about");
+// })
 
 let port=process.env.PORT;
 if(port==null ||port==""){
