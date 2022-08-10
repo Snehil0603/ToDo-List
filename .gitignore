@@ -1,5 +1,3 @@
 /node_modules
 npm-debug.log
-.DS-Store
-.env
-/*.env
+/.env
