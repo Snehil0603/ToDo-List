@@ -1,0 +1,21 @@
+{
+  "name": "to-do-list-v1",
+  "version": "1.0.0",
+  "description": "to-do-list-v1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Snehil",
+  "license": "ISC",
+  "engines": {
+    "node": "v16.15.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.1"
+  }
+}
