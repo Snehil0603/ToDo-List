@@ -7,7 +7,7 @@
 <div class="box">
 
 
-   
+   <!--looping through collections and deleting the checked post  -->
     <%   Item.forEach(function(item){ %>
         <form action="/delete" method="post">
         <div class="item">
@@ -18,7 +18,7 @@
 </form>
  <%   }) %>
 
-
+<!-- Adding data to our to-do list  -->
 <form action="/" method="post" class="item">
     <input type="text" name="newItem" placeholder="New item">
     <button type="submit" name="list" value= <%=listTitle%> >+</button>
