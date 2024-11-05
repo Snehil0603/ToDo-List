@@ -15,7 +15,9 @@ app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
 
-app.set('view engine', 'ejs');
+const path = require('path');
+app.set('views', path.join(__dirname, 'views'));  // Explicitly set the views path
+app.set('view engine', 'ejs');                     // Set the view engine to EJS
 
 
 // Connecting to mongodb cluster
