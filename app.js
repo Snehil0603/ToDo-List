@@ -82,16 +82,21 @@ app.get("/",function(req,res){
 })
 
 // Posting new items  
-app.post("/",function(req,res){
-    var addItem = req.body.newItem;
-    const itm= new newItem({
-        name :addItem,
-    })
-    itm.save();
+app.post("/", function(req, res) {
+    var addItem = req.body.newItem.trim(); // Trim whitespace
+
+    // Check if the newItem is not empty
+    if (addItem) {
+        const itm = new newItem({
+            name: addItem,
+        });
+        itm.save();
+    } else {
+        console.log("Empty item not added."); // Log for debugging
+    }
+
     res.redirect("/");
-
-
-})
+});
 
 
 
