@@ -12,7 +12,7 @@ const mongoose=require("mongoose");
 const app=express();
 
 app.use(bodyparser.urlencoded({extended:true}));
-// app.use(express.static("public"));
+app.use(express.static("public"));
 
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
