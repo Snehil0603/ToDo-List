@@ -110,11 +110,7 @@ app.post("/delete",function(req,res){
 
 
 // This helps to host our site locally as well as on other port
-let port=process.env.PORT;
-if(port==null ||port==""){
-    port=3000
-}
-
-app.listen(port , function(){
-    console.log("Server running successfully");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
