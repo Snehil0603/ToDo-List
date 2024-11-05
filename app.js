@@ -12,12 +12,11 @@ const mongoose=require("mongoose");
 const app=express();
 
 app.use(bodyparser.urlencoded({extended:true}));
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
-
-const path = require('path');
-app.set('views', path.join(__dirname, 'views'));  // Explicitly set the views path
-app.set('view engine', 'ejs');                     // Set the view engine to EJS
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+app.use(express.static(__dirname + "public"));                   // Set the view engine to EJS
 
 
 // Connecting to mongodb cluster
